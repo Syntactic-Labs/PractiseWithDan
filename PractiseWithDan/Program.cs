@@ -13,7 +13,7 @@ namespace PractiseWithDan
                 Console.WriteLine(pyd);
                 pyd += "#";
             }*/
-            
+
             /*for (int i = 1; i < 100; i++)
             {
                 var result = "";
@@ -23,18 +23,26 @@ namespace PractiseWithDan
                 Console.WriteLine(result);
             }
             */
-            var size = 10;
-            
-            for (int i = 0; i < size; i++)
+            //var size = 10;
+
+            //for (int i = 0; i < size; i++)
+            //{
+            //    var result = "";
+            //    for (int L = 0; L < size; L++)
+            //    {
+            //        if ((i+L)%2==0){ result += "O"; }
+            //        if ((i+L) % 2==1){ result += "X"; }
+
+            //    }
+            //    Console.WriteLine(result);
+            //}
+
+            int[] Fred = { 1, 2, 3, 4, 5, 56 };
+
+
+            for (int i = 0; i < Fred.Length; i++)
             {
-                var result = "";
-                for (int L = 0; L < size; L++)
-                {
-                    if ((i+L)%2==0){ result += "O"; }
-                    if ((i+L) % 2==1){ result += "X"; }
-                    
-                }
-                Console.WriteLine(result);
+                Console.WriteLine($"{Fred[i]},");
             }
             
 
