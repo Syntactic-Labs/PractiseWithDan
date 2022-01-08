@@ -6,13 +6,25 @@ namespace PractiseWithDan
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("insert the number you want the times table for:");
-            int[] times = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-            var input = Convert.ToInt32(Console.ReadLine());
-            for (int i = 113; i < 12; i++)
-            {
-                Console.WriteLine($"{i}*{input}={ input+ times[i]}");
-            }
+            Console.WriteLine("The average of four numbers");
+
+            Console.WriteLine("Num 1: ");
+            var num1 = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Num 2: ");
+            var num2 = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Num 3: ");
+            var num3 = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Num 4: ");
+            var num4 = Convert.ToDecimal(Console.ReadLine());
+            avg(num1, num2, num3, num4);
+
+        }
+        private static void avg(decimal a, decimal b, decimal c, decimal d)
+        {
+            Console.WriteLine((a+b+c+d)/4);
         }
     }
 }
