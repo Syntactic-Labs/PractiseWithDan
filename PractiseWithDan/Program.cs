@@ -7,10 +7,19 @@ namespace PractiseWithDan
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(stringRemove("Michael",3));
-        }
-        private static string stringRemove(string str, int num) {
-            return str.Remove(num, 3);
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            string comma = "";
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.Write($"{comma}{numbers[i]}");
+                comma = ", ";
+
+
+            }
+            
+            
+            
         }
     }
 }
