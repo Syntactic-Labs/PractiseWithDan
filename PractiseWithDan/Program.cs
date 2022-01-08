@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace PractiseWithDan
 {
@@ -6,25 +7,24 @@ namespace PractiseWithDan
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("The average of four numbers");
-
-            Console.WriteLine("Num 1: ");
-            var num1 = Convert.ToDecimal(Console.ReadLine());
-
-            Console.WriteLine("Num 2: ");
-            var num2 = Convert.ToDecimal(Console.ReadLine());
-
-            Console.WriteLine("Num 3: ");
-            var num3 = Convert.ToDecimal(Console.ReadLine());
-
-            Console.WriteLine("Num 4: ");
-            var num4 = Convert.ToDecimal(Console.ReadLine());
-            avg(num1, num2, num3, num4);
-
+            Console.WriteLine("Hi cutie! What's your name?!?");
+            var name = Console.ReadLine();
+            Console.WriteLine($"Well hello {name}! A pretty name for a pretty girl.");
+            Thread.Sleep(3000);
+            Console.WriteLine("And how old are you?...");
+            var age = Convert.ToInt32(Console.ReadLine());
+            drinkAge(age);
         }
-        private static void avg(decimal a, decimal b, decimal c, decimal d)
+        private static void drinkAge(int a)
         {
-            Console.WriteLine((a+b+c+d)/4);
+            if (a < 18) { Console.WriteLine("If you're going to lie aleast do it well!!!");
+                Console.WriteLine("try again");
+                drinkAge(Convert.ToInt32(Console.ReadLine())); }
+            if (a > 18 && a < 30){ Console.WriteLine("I did not ask how old you want to be!");
+                Console.WriteLine("try again");
+                drinkAge(Convert.ToInt32(Console.ReadLine()));
+            }
+            if (a==31){ Console.WriteLine("Honesty! Well you look ageless. A real beauty!");}
         }
     }
 }
