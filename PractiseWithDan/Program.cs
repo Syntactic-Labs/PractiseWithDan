@@ -12,7 +12,15 @@ namespace PractiseWithDan
             var stringEx = "This is only a test!";
             C.WriteLine(stringEx.ToLower());
             var pie = Math.PI;
-            C.WriteLine(Math.Abs(pie)); 
+            C.WriteLine(Math.Abs(pie));
+            for (int i = 0; i < 100; i++)
+            {
+                if (i%2!=0)
+                {
+                    C.WriteLine(i);
+                }
+
+            }
             
 
         }
