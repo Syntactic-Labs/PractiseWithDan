@@ -22,6 +22,7 @@ namespace PractiseWithDan
 
             }
             
+            
 
         }
         //private static void MultiTable()
