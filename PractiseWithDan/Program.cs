@@ -9,18 +9,20 @@ namespace PractiseWithDan
         static void Main(string[] args)
         {   //C.WriteLine("Insert the number you want the times table for:");
             //MultiTable();
-            var stringEx = "This is only a test!";
-            C.WriteLine(stringEx.ToLower());
-            var pie = Math.PI;
-            C.WriteLine(Math.Abs(pie));
-            for (int i = 0; i < 100; i++)
+            var str = "A man went to the moon but will we ever reach the stars!";
+            string[] words = str.Split(" ");
+            var ctl = 0;
+            var w = "";
+            foreach (var word in words)
             {
-                if (i%2!=0)
+                if (word.Length>ctl)
                 {
-                    C.WriteLine(i);
+                    w = word;
+                    ctl = word.Length;
                 }
 
             }
+                C.WriteLine($"The longest word is: {w}");
             
             
 
