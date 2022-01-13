@@ -11,10 +11,10 @@ namespace PractiseWithDan
         static void Main(string[] args)
         {   //C.WriteLine("Insert the number you want the times table for:");
             //MultiTable();
-            FileInfo f = new FileInfo("/repos/PRS-Capstone");
-            Console.WriteLine("\nSize of a file: " + f.Length.ToString());
-
-
+            string hexval = "4C0";
+            Console.WriteLine("Hexadecimal number: " + hexval);
+            int decValue = int.Parse(hexval, System.Globalization.NumberStyles.HexNumber);
+            Console.WriteLine("Decimal number: " + decValue);
 
         }
         //private static void MultiTable()
