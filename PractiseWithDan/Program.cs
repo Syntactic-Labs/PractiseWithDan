@@ -1,6 +1,7 @@
 ﻿using System;
 using C = System.Console;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace PractiseWithDan
 {
@@ -9,20 +10,20 @@ namespace PractiseWithDan
         static void Main(string[] args)
         {   //C.WriteLine("Insert the number you want the times table for:");
             //MultiTable();
-            var str = "A man went to the moon but will we ever reach the stars!";
-            string[] words = str.Split(" ");
-            var ctl = 0;
-            var w = "";
-            foreach (var word in words)
+            var pracLine = "I am going to reverse the order of these words.";
+            C.WriteLine($"pracLine: {pracLine}");
+            var res = "";
+            List<string> wordsList = new List<string>();
+            string[] words = pracLine.Split(new[] { " " }, StringSplitOptions.None);
+            for (int i = words.Length - 1; i >= 0; i--)
             {
-                if (word.Length>ctl)
-                {
-                    w = word;
-                    ctl = word.Length;
-                }
-
+                res += words[i] + " ";
             }
-                C.WriteLine($"The longest word is: {w}");
+            wordsList.Add(res);
+            foreach (var w in wordsList)
+            {
+                C.WriteLine($"Reverse: {w}");
+            }
             
             
 
