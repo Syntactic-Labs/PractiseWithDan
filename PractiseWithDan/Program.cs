@@ -2,6 +2,7 @@
 using C = System.Console;
 using System.Threading;
 using System.Collections.Generic;
+using System.IO;
 
 namespace PractiseWithDan
 {
@@ -10,22 +11,10 @@ namespace PractiseWithDan
         static void Main(string[] args)
         {   //C.WriteLine("Insert the number you want the times table for:");
             //MultiTable();
-            var pracLine = "I am going to reverse the order of these words.";
-            C.WriteLine($"pracLine: {pracLine}");
-            var res = "";
-            List<string> wordsList = new List<string>();
-            string[] words = pracLine.Split(new[] { " " }, StringSplitOptions.None);
-            for (int i = words.Length - 1; i >= 0; i--)
-            {
-                res += words[i] + " ";
-            }
-            wordsList.Add(res);
-            foreach (var w in wordsList)
-            {
-                C.WriteLine($"Reverse: {w}");
-            }
-            
-            
+            FileInfo f = new FileInfo("/repos/PRS-Capstone");
+            Console.WriteLine("\nSize of a file: " + f.Length.ToString());
+
+
 
         }
         //private static void MultiTable()
