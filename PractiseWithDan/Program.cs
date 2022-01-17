@@ -11,21 +11,21 @@ namespace PractiseWithDan
         static void Main(string[] args)
         {   //C.WriteLine("Insert the number you want the times table for:");
             //MultiTable();
-            var name = "";
-            AskName(ref name);
+            var name = AskName();
             PrintName(name);
-
+            name = AskName();
+            PrintName(name);
         }
-        private static void AskName(ref string n)
+        private static string AskName()
         {
-            C.Write("Please sir. What is your name?!?!: ");
-            
-            n = Convert.ToString(C.ReadLine());
+            C.WriteLine("What is your name: ");
+            return Convert.ToString(C.ReadLine());
         }
         private static void PrintName(string n)
         {
-            C.WriteLine($"Hello {n}");
+            C.WriteLine($"hello! {n}");
         }
+        
         //private static void MultiTable()
         //{   int[] times = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
         //    var input = C.ReadLine();
