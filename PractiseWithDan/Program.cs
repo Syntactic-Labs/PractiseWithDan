@@ -10,11 +10,18 @@ namespace PractiseWithDan
     {
         static void Main(string[] args)
         {
-            Books book = new("Lord of the Rings", "Jk Rowling", 25, 350, true);
-            Books book1 = new("Fly", "Someguy", 42, 826, true);
-            book1.Print();
-            book.Print();
+            Books book = new(title: "Fly", author: "Someguy", inventory: 42, pages: 826, inStock: true);
+            Books book1 = new(title:"Fly", author:"Someguy", inventory: 42, pages:826, inStock:true);
+            Books book2 = new(title: "Fly", author: "Someguy", inventory: 42, pages: 826, inStock: true);
+            Books book3 = new(title: "Fly", author: "Someguy", inventory: 42, pages: 826, inStock: true);
+            Books book4 = new(title: "Fly", author: "Someguy", inventory: 42, pages: 826, inStock: true);
+            Books[] list = { book, book1, book2, book3, book4, };
+            foreach (var b in list)
+            {
+                b.Print();
+            }
+
         }
-        
+
     }
 }

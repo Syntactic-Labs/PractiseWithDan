@@ -17,6 +17,7 @@ namespace PractiseWithDan
         public bool InStock { get; set; }
         
         public Books() { }
+        
         public Books(string title, string author, int inventory, int pages, bool inStock)
         {  
             this.Id = NextId++;
@@ -28,6 +29,16 @@ namespace PractiseWithDan
         }
         public void Print()
         {
+            Console.WriteLine("What is the title of the book?: ");
+            this.Title = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("What is the name of the Author?: ");
+            this.Author = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("What is the Inventory?: ");
+            this.Inventory = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("How many pages?: ");
+            this.Pages = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Is this ok stock?:");
+            this.InStock=Convert.ToBoolean(Console.ReadLine());
             Console.WriteLine($"Id:{this.Id} | Title:{this.Title} | Author:{this.Author} | Inventory:{this.Inventory} | Pages:{this.Pages} | InStock:{this.InStock}");
             Console.WriteLine("");
         }
