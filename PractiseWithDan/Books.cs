@@ -33,14 +33,13 @@ namespace PractiseWithDan
             this.Title = Convert.ToString(Console.ReadLine());
             Console.WriteLine("What is the name of the Author?: ");
             this.Author = Convert.ToString(Console.ReadLine());
-            Console.WriteLine("What is the Inventory?: ");
+            Console.WriteLine("How many are in stock?: ");
             this.Inventory = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("How many pages?: ");
             this.Pages = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Is this ok stock?:");
+            Console.WriteLine("Is this in stock?:");
             this.InStock=Convert.ToBoolean(Console.ReadLine());
             Console.WriteLine($"Id:{this.Id} | Title:{this.Title} | Author:{this.Author} | Inventory:{this.Inventory} | Pages:{this.Pages} | InStock:{this.InStock}");
-            Console.WriteLine("");
         }
     }
 }
